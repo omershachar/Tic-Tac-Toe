@@ -1,2 +1,4 @@
 # Tic-Tac-Toe
-Just a regular tic tac toe game...
+Version-1
+
+In the following versions the user will draw it's move on the board using the mouse

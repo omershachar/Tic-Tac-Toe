@@ -1,4 +1,4 @@
-from curses.ascii import isdigit
+# from curses.ascii import isdigit
 from helpers import draw_board, check_turn, check_for_win
 import os
 

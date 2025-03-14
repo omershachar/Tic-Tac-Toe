@@ -7,6 +7,7 @@ spots = {1 : '1', 2 : '2', 3 : '3', 4 : '4', 5 : '5',
 
 playing = True
 complete = False
+tie = False
 turn = 0
 prev_turn = -1
 
@@ -30,9 +31,9 @@ while playing:
             # Valid input, update the board
             turn += 1
             spots[int(choice)] = check_turn(turn)
-    # Check the game termination (winner/tie)
+    # Check the game termination (win/lose/tie)
     if check_for_win(spots): playing, complete = False, True
-    if turn > 8 : playing = False
+    if turn > 8 : playing, tie = False, True
 
 # Print the result outside of the main loop
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,6 +44,7 @@ if complete:
     # O win
     else: print("Player 2 Wins!")
 # Tie
-else: print("It's a Tie...")
+elif tie: print("It's a Tie...")
+else: print("End of game")
 
 # End of main
